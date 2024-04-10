@@ -3,9 +3,34 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  /* --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255; */
+
+  --primary: #69c6de;
+  --primary-foreground: #6e6e6d;
+  --secondary: #e7216a;
+
+  --gray-light: #a9a9a9;
+  --gray-medium: #384347;
+
+  --color-neutrals-1: #ffffff;
+  --color-neutrals-2: #f7f7f7;
+  --color-neutrals-3: #e6e6e6;
+  --color-neutrals-4: #c7c7c7;
+  --color-neutrals-5: #737373;
+
+  --color-success-main: #008760;
+  --color-success-light: #eafdf8;
+  --color-error-main: #d71920;
+  --color-error-light: #fde9e9;
+  --color-alert-main: #ea580c;
+  --color-alert-light: #ffeee5;
+  --color-information-main: #2f7ea6;
+  --color-information-light: #f2fbff;
+  --color-visited-main: #663399;
+
+  --overlay: rgba(0, 0, 0, 0.6);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,12 +43,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
