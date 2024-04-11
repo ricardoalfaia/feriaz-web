@@ -14,7 +14,7 @@ const button = tv({
       ghost: 'rounded-md px-2 hover:bg-zinc-50 shadow-none dark:hover:bg-white/5',
       primary: 'bg-secondary-main text-white hover:bg-violet-700 dark:bg-violet-500 dark:hover:bg-violet-600',
       outline: 'border border-s border-neutrals-3 text-gray-medium bg-white shadow-1',
-      selected: 'border border-s border-secondary-main rounded-full text-secondary-main hover:bg-secondary-main',
+      selected: 'border border-s border-secondary-main rounded-full text-secondary-main hover:bg-secondary-main hover:text-white',
     },
     size: {
       large: 'h-[48px] rounded-l font-extrabold',
