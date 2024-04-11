@@ -3,16 +3,12 @@
 @tailwind utilities;
 
 :root {
-  /* --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255; */
+  --primary: hsl(192.31, 63.93%, 64.12%);
+  --primary-foreground: hsl(60, 0.46%, 42.94%);
+  --secondary: hsl(337.88, 80.49%, 51.76%);
 
-  --primary: #69c6de;
-  --primary-foreground: #6e6e6d;
-  --secondary: #e7216a;
-
-  --gray-light: #a9a9a9;
-  --gray-medium: #384347;
+  --gray-light: #d9d9d9;
+  --gray-medium: #6e6e6d;
 
   --color-neutrals-1: #ffffff;
   --color-neutrals-2: #f7f7f7;
@@ -49,5 +45,11 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  select[type='number'] {
+    appearance: none !important;
   }
 }
