@@ -33,6 +33,7 @@ const config: Config = {
       4: 'box-shadow: 0px 16px 16px 0px #000000',
       'pdp-color-selected': 'inset 0 0 0 1.5px #fff, 0 0 0 1.5px #000;',
       'pdp-color': 'inset 0 0 0 1px #fff, 0 0 0 1px #000;',
+      none: 'shadow: 0 0 0 0',
     },
 
     opacity: {
@@ -49,13 +50,13 @@ const config: Config = {
     },
 
     fontSize: {
-      xs: '12px', //'0.75rem'
-      s: '14px', //0.875rem
-      m: '16px', //1rem
-      l: '20px', //1.25rem
-      xl: '28px', //1.75rem
-      '2xl': '36px', //2.25rem
-      g: '48px', //3rem
+      xs: '12px',
+      s: '14px',
+      m: '16px',
+      l: '20px',
+      xl: '28px',
+      '2xl': '36px',
+      g: '48px',
     },
 
     borderWidth: {
@@ -110,6 +111,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('tailwind-scrollbar'), require('@tailwindcss/forms')],
+  plugins: [require('tailwind-scrollbar')],
 }
 export default config

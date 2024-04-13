@@ -4,7 +4,8 @@
       "facebook",
       "Parens",
       "stylelint",
-      "tailwindcss"
+      "tailwindcss",
+      "testid"
     ],
     "tailwindCSS.experimental.classRegex": [
       ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
