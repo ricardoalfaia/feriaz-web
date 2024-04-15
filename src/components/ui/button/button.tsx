@@ -1,13 +1,14 @@
 import { ButtonHTMLAttributes } from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { tv, VariantProps } from 'tailwind-variants'
+import cn from '@/libs/utils'
 
 const button = tv({
   base: [
     'flex justify-center items-center gap-s',
     'w-full text-l font-semibold outline-none shadow-1',
     'focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-violet-500',
-    'active:opacity-4',
+    'transition duration-300 ease-in-out active:opacity-4',
   ],
   variants: {
     variant: {

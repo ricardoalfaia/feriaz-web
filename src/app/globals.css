@@ -29,6 +29,28 @@
   --overlay: rgba(0, 0, 0, 0.6);
 }
 
+input[type='date']::-webkit-calendar-picker-indicator {
+  /* position: absolute;
+  background: url('/static/icon _calendar.svg') no-repeat;
+  left: 14.91px;
+  filter: invert(1);
+  opacity: 1;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-width: thin; */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background: transparent;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;

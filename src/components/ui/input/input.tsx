@@ -57,17 +57,20 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 
     return (
       <>
-        <div className={cn('relative flex justify-start items-center w-full h-[52px] bg-white mb-m', containerClassName)}>
+        <div className={cn('relative flex justify-start items-center w-full h-[54px] bg-white mb-m', containerClassName)}>
+          {/* {Icons && <Icons name={icon} size={iconSize} className="ml-m" />} */}
+
           {((label && focus) || error || valueExists) && (
             <label
               className={cn(
                 'absolute',
-                'top-[-1px]',
-                'left-m',
-                'px-[5px]',
+                '-top-xs',
+                'left-l',
+                'px-xs',
                 'z-10',
                 'p-0',
-                'text-[11.5px]',
+                'text-[11px]',
+                'lowercase',
                 props.disabled ? 'bg-neutrals-2' : 'bg-neutrals-1',
                 error && 'text-error-main'
               )}
@@ -77,13 +80,11 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             </label>
           )}
 
-          {Icons && <Icons name={icon} size={iconSize} className="ml-m" />}
-
           <input
             {...props}
             ref={ref}
             className={cn(
-              'w-full border-none text-neutrals-4 text-m lowercase ml-s outline-none',
+              'w-full border-none text-neutrals-4 text-m lowercase ml-[12px] outline-none',
               forgotPassword ? 'rounded-[10px]' : 'rounded-s',
               error ? 'border-error-main' : 'border-neutrals-4',
               error ? 'focus:border-error-main' : 'focus:border-neutrals-6',
@@ -100,7 +101,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           {type === 'password' && valueExists && (
             <div
               data-testid="Input/eye"
-              className="absolute top-[50%] right-[0] flex h-full translate-y-[-50%] cursor-pointer flex-row items-center justify-center pr-m"
+              className="absolute top-[50%] right-[0] flex h-full translate-y-[-50%] flex-row items-center justify-center pr-m"
               onClick={toggleShowPassword}>
               <span className={cn('mr-[13px]', 'text-[11px]', 'font-medium', error ? 'text-error-main' : 'text-neutrals-2')}>
                 {showPassword ? 'ocultar' : 'mostrar'} senha
