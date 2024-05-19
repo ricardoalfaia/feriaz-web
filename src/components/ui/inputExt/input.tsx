@@ -2,7 +2,7 @@
 
 import React, { useReducer, useState } from 'react'
 import { Icons, IconNames } from '@/components/Icons/icons'
-import cn from '@/libs/utils'
+import { cn } from '@/lib/utils'
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string

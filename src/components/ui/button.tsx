@@ -1,24 +1,24 @@
 import { ButtonHTMLAttributes } from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { tv, VariantProps } from 'tailwind-variants'
-import cn from '@/libs/utils'
 
 const button = tv({
   base: [
-    'flex justify-center items-center gap-s',
-    'w-full text-l font-semibold outline-none shadow-1',
+    'flex justify-center items-center gap-sm',
+    'w-full text-lg font-semibold outline-none shadow-1',
     'focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-violet-500',
     'transition duration-300 ease-in-out active:opacity-4',
   ],
   variants: {
     variant: {
       ghost: 'rounded-md px-2 hover:bg-zinc-50 shadow-none dark:hover:bg-white/5',
-      primary: 'rounded-m bg-secondary-main text-white hover:bg-violet-700 dark:bg-violet-500 dark:hover:bg-violet-600',
-      outline: 'border border-s border-neutrals-3 text-gray-medium bg-white shadow-1',
-      selected: 'rounded-full border-s border-secondary-main text-secondary-main hover:bg-secondary-main hover:text-white',
+      primary:
+        'rounded-md bg-secondary-main shadow-none dark:hover:bg text-white hover:bg-violet-700 dark:bg-violet-500 dark:hover:bg-violet-600',
+      outline: 'border border-sm border-neutrals-3 text-gray-medium bg-white shadow-1',
+      selected: 'rounded-full border-sm border-secondary-main text-secondary-main hover:bg-secondary-main hover:text-white',
     },
     size: {
-      large: 'h-[48px] font-extrabold',
+      large: 'h-xxl font-extrabold',
       small: 'h-xl font-normal',
     },
   },

@@ -3,90 +3,62 @@ import type { Config } from 'tailwindcss'
 const config: Config = {
   content: ['./index.html', './src/**/*.{html, js,ts,jsx,tsx}'],
   theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
     screens: {
       xs: '320px',
       s: '375px',
       sm: '480px',
-      m: '640px',
-      l: '1024px',
+      md: '640px',
+      lg: '1024px',
       xl: '1360px',
       1400: '1400px',
     },
 
-    spacing: {
-      none: '0px',
-      xs: '4px',
-      s: '8px',
-      m: '16px',
-      l: '24px',
-      xl: '32px',
-      '2xl': '48px',
-      '3xl': '64px',
-      '4xl': '104px',
-      g: '120px',
-    },
-
-    boxShadow: {
-      1: 'box-shadow: -4px -4px 10px 0px #000000, 4px 4px 6px 0px #000000',
-      2: 'box-shadow: 4px 3px 20px 4px #000000, 2px 2px 4px 0px #000000,  4px 4px 10px 0px #000000',
-      3: 'box-shadow: 0px 8px 16px 0px #000000',
-      4: 'box-shadow: 0px 16px 16px 0px #000000',
-      'pdp-color-selected': 'inset 0 0 0 1.5px #fff, 0 0 0 1.5px #000;',
-      'pdp-color': 'inset 0 0 0 1px #fff, 0 0 0 1px #000;',
-      none: 'shadow: 0 0 0 0',
-    },
-
-    opacity: {
-      1: '0.16',
-      2: '0.40',
-      3: '0.64',
-      4: '0.80',
-    },
-
-    lineHeight: {
-      s: '100%',
-      m: '140%',
-      l: '180%',
-    },
-
-    fontSize: {
-      xs: '12px',
-      s: '14px',
-      m: '16px',
-      l: '20px',
-      xl: '28px',
-      '2xl': '36px',
-      g: '48px',
-    },
-
-    borderWidth: {
-      none: '0',
-      s: '1px',
-      m: '2px',
-    },
-
-    letterSpacing: {
-      s: '0%',
-      m: '4%',
-      l: '8%',
-    },
-
-    borderRadius: {
-      none: '0px',
-      s: '4px',
-      m: '8px',
-      l: '10px',
-      full: '50vh',
-    },
-
     extend: {
       colors: {
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+
         primary: {
-          main: 'var(--primary)',
-          foreground: 'var(--primary-foreground)',
+          DEFAULT: 'hsl(var(--primary))',
+          main: 'hsl(var(--primary-main))',
+          foreground: 'hsl(var(--primary-foreground))',
         },
-        'secondary-main': 'var(--secondary)',
-        'tertiary-main': 'var(--color-tertiary-main)',
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          main: 'hsl(var(--secondary-main))',
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
+
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
 
         'neutrals-1': 'var(--color-neutrals-1)',
         'neutrals-2': 'var(--color-neutrals-2)',
@@ -109,8 +81,89 @@ const config: Config = {
 
         overlay: 'var(--overlay)',
       },
+
+      spacing: {
+        none: '0px',
+        xs: '4px',
+        sm: '8px',
+        md: '16px',
+        lg: '24px',
+        xl: '32px',
+        '2xl': '48px',
+        '3xl': '64px',
+        '4xl': '104px',
+        g: '120px',
+      },
+
+      boxShadow: {
+        1: 'box-shadow: -4px -4px 10px 0px #000000, 4px 4px 6px 0px #000000',
+        2: 'box-shadow: 4px 3px 20px 4px #000000, 2px 2px 4px 0px #000000,  4px 4px 10px 0px #000000',
+        3: 'box-shadow: 0px 8px 16px 0px #000000',
+        4: 'box-shadow: 0px 16px 16px 0px #000000',
+        'pdp-color-selected': 'inset 0 0 0 1.5px #fff, 0 0 0 1.5px #000;',
+        'pdp-color': 'inset 0 0 0 1px #fff, 0 0 0 1px #000;',
+        none: 'shadow: 0 0 0 0',
+      },
+
+      opacity: {
+        1: '0.16',
+        2: '0.40',
+        3: '0.64',
+        4: '0.80',
+      },
+
+      lineHeight: {
+        sm: '100%',
+        md: '140%',
+        lg: '180%',
+      },
+
+      fontSize: {
+        xs: '12px',
+        sm: '14px',
+        md: '16px',
+        lg: '20px',
+        xl: '28px',
+        '2xl': '36px',
+        '3xl': '48px',
+      },
+
+      borderWidth: {
+        none: '0',
+        sm: '1px',
+        md: '2px',
+      },
+
+      letterSpacing: {
+        sm: '0%',
+        md: '4%',
+        lg: '8%',
+      },
+
+      borderRadius: {
+        none: '0px',
+        sm: '4px',
+        md: '8px',
+        lg: '10px',
+        full: '50vh',
+      },
+
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+      },
     },
   },
-  plugins: [require('tailwind-scrollbar')],
-}
+  plugins: [require('tailwindcss-animate')],
+} satisfies Config
 export default config

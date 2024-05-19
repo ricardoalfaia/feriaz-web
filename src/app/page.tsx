@@ -1,10 +1,11 @@
 import Logo from '@/components/logo'
-import { Icons } from '@/components/Icons/icons'
-import { Button } from '@/components/ui/button'
+// import { Icons } from '@/components/Icons/icons'
+// import { Button } from '@/components/ui/button'
 
-import { BadgeDollarSign, BedDouble, CalendarDays, CarFront, Repeat2, User } from 'lucide-react'
+// import { BadgeDollarSign, BedDouble, CalendarDays, CarFront, Repeat2, User } from 'lucide-react'
 
-import cn from '@/libs/utils'
+import { DatePickerWithRange } from '@/components/ui/date-picker'
+import { cn } from '@/lib/utils'
 import { Input } from '@/components/ui/inputExt/input'
 
 export default function Home() {
@@ -12,7 +13,9 @@ export default function Home() {
     <main className={cn('px-xl')}>
       <Logo />
 
-      <div className="flex justify-start items-center gap-m">
+      <DatePickerWithRange className="rounded-md border input:border-none" />
+
+      {/* <div className="flex justify-start items-center gap-m">
         <Input
           id="cidade"
           type="text"
@@ -50,19 +53,17 @@ export default function Home() {
           required
           iconSize={20}
         />
-      </div>
+      </div> */}
 
-      <Button variant="primary" size="small" className="w-[150px] mb-m">
+      {/* <Button variant="primary" size="small" className="w-[150px] mb-m">
         Confirmar
-      </Button>
+      </Button> */}
 
       {/* <Input type="text" placeholder="Digite o email" containerCss="border-s border-neutrals-3" icon="Passport" iconSize={24} />
       <Input type="text" placeholder="Digite o email" containerCss="border-s border-neutrals-3" icon="Phone" iconSize={20} />
       <Input type="text" placeholder="Digite o email" containerCss="border-s rounded-b-l border-neutrals-3" icon="Calendar" iconSize={20} /> */}
+      {/* 
 
-      {/* <Button variant="primary" size="large" className="w-[245px] mb-m">
-        Login
-      </Button>
 
       <Button variant="primary" size="small" className="w-[150px] mb-m">
         Confirmar

@@ -1,5 +1,5 @@
 import { iconsHashTable } from './iconsHashTable'
-import cn from '@/libs/utils'
+import { cn } from '@/lib/utils'
 
 const Colors = [
   'primary-main',
