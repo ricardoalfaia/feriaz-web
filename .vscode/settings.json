@@ -1,8 +1,13 @@
 {
     "cSpell.words": [
-        "clsx",
-        "Parens",
-        "stylelint",
-        "tailwindcss"
+      "clsx",
+      "facebook",
+      "Parens",
+      "stylelint",
+      "tailwindcss",
+      "testid"
+    ],
+    "tailwindCSS.experimental.classRegex": [
+      ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
     ]
 }

@@ -2,36 +2,124 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255; */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
 
-  --primary: #69c6de;
-  --primary-foreground: #6e6e6d;
-  --secondary: #e7216a;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
 
-  --gray-light: #a9a9a9;
-  --gray-medium: #384347;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
 
-  --color-neutrals-1: #ffffff;
-  --color-neutrals-2: #f7f7f7;
-  --color-neutrals-3: #e6e6e6;
-  --color-neutrals-4: #c7c7c7;
-  --color-neutrals-5: #737373;
+    --primary: 0 0% 9%;
+    --primary-main: 192.31, 63.93%, 64.12%;
+    --primary-foreground: 0 0% 98%;
+    --primary-foreground-main: 60 0.46% 42.94%;
 
-  --color-success-main: #008760;
-  --color-success-light: #eafdf8;
-  --color-error-main: #d71920;
-  --color-error-light: #fde9e9;
-  --color-alert-main: #ea580c;
-  --color-alert-light: #ffeee5;
-  --color-information-main: #2f7ea6;
-  --color-information-light: #f2fbff;
-  --color-visited-main: #663399;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --secondary-main: 337.88 80.49% 51.76%;
 
-  --overlay: rgba(0, 0, 0, 0.6);
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+
+    --gray-light: #d9d9d9;
+    --gray-medium: #6e6e6d;
+
+    --color-neutrals-1: #ffffff;
+    --color-neutrals-2: #f7f7f7;
+    --color-neutrals-3: #e6e6e6;
+    --color-neutrals-4: #c7c7c7;
+    --color-neutrals-5: #737373;
+
+    --color-success-main: #008760;
+    --color-success-light: #eafdf8;
+    --color-error-main: #d71920;
+    --color-error-light: #fde9e9;
+    --color-alert-main: #ea580c;
+    --color-alert-light: #ffeee5;
+    --color-information-main: #2f7ea6;
+    --color-information-light: #f2fbff;
+    --color-visited-main: #663399;
+
+    --overlay: rgba(0, 0, 0, 0.6);
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
 }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* input[type='date']::-webkit-calendar-picker-indicator {
+  position: absolute;
+  background: url('/static/icon _calendar.svg') no-repeat;
+  left: 14.91px;
+  filter: invert(1);
+  opacity: 1;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-width: thin;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background: transparent;
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -42,12 +130,17 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-size: 16px;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  select[type='number'] {
+    appearance: none !important;
   }
 }
