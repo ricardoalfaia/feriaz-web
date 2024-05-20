@@ -20,6 +20,72 @@ const config: Config = {
       1400: '1400px',
     },
 
+    spacing: {
+      none: '0px',
+      xs: '4px',
+      sm: '8px',
+      md: '16px',
+      lg: '24px',
+      xl: '32px',
+      '2xl': '48px',
+      '3xl': '64px',
+      '4xl': '104px',
+      g: '120px',
+    },
+
+    boxShadow: {
+      1: 'box-shadow: -4px -4px 10px 0px #000000, 4px 4px 6px 0px #000000',
+      2: 'box-shadow: 4px 3px 20px 4px #000000, 2px 2px 4px 0px #000000,  4px 4px 10px 0px #000000',
+      3: 'box-shadow: 0px 8px 16px 0px #000000',
+      4: 'box-shadow: 0px 16px 16px 0px #000000',
+      'pdp-color-selected': 'inset 0 0 0 1.5px #fff, 0 0 0 1.5px #000;',
+      'pdp-color': 'inset 0 0 0 1px #fff, 0 0 0 1px #000;',
+      none: 'shadow: 0 0 0 0',
+    },
+
+    opacity: {
+      1: '0.16',
+      2: '0.40',
+      3: '0.64',
+      4: '0.80',
+    },
+
+    lineHeight: {
+      sm: '100%',
+      md: '140%',
+      lg: '180%',
+    },
+
+    fontSize: {
+      xs: '12px',
+      sm: '14px',
+      md: '16px',
+      lg: '20px',
+      xl: '28px',
+      '2xl': '36px',
+      '3xl': '48px',
+    },
+
+    // borderWidth: {
+    //   none: '0',
+    //   sm: '1px',
+    //   md: '2px',
+    // },
+
+    letterSpacing: {
+      sm: '0%',
+      md: '4%',
+      lg: '8%',
+    },
+
+    // borderRadius: {
+    //   none: '0px',
+    //   sm: '4px',
+    //   md: '8px',
+    //   lg: '10px',
+    //   full: '50vh',
+    // },
+
     extend: {
       colors: {
         border: 'hsl(var(--border))',
@@ -30,7 +96,7 @@ const config: Config = {
 
         primary: {
           DEFAULT: 'hsl(var(--primary))',
-          main: 'hsl(var(--primary-main))',
+          main: 'var(--primary-main)',
           foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {
@@ -80,72 +146,6 @@ const config: Config = {
         'visited-main': 'var(--color-visited-main)',
 
         overlay: 'var(--overlay)',
-      },
-
-      spacing: {
-        none: '0px',
-        xs: '4px',
-        sm: '8px',
-        md: '16px',
-        lg: '24px',
-        xl: '32px',
-        '2xl': '48px',
-        '3xl': '64px',
-        '4xl': '104px',
-        g: '120px',
-      },
-
-      boxShadow: {
-        1: 'box-shadow: -4px -4px 10px 0px #000000, 4px 4px 6px 0px #000000',
-        2: 'box-shadow: 4px 3px 20px 4px #000000, 2px 2px 4px 0px #000000,  4px 4px 10px 0px #000000',
-        3: 'box-shadow: 0px 8px 16px 0px #000000',
-        4: 'box-shadow: 0px 16px 16px 0px #000000',
-        'pdp-color-selected': 'inset 0 0 0 1.5px #fff, 0 0 0 1.5px #000;',
-        'pdp-color': 'inset 0 0 0 1px #fff, 0 0 0 1px #000;',
-        none: 'shadow: 0 0 0 0',
-      },
-
-      opacity: {
-        1: '0.16',
-        2: '0.40',
-        3: '0.64',
-        4: '0.80',
-      },
-
-      lineHeight: {
-        sm: '100%',
-        md: '140%',
-        lg: '180%',
-      },
-
-      fontSize: {
-        xs: '12px',
-        sm: '14px',
-        md: '16px',
-        lg: '20px',
-        xl: '28px',
-        '2xl': '36px',
-        '3xl': '48px',
-      },
-
-      borderWidth: {
-        none: '0',
-        sm: '1px',
-        md: '2px',
-      },
-
-      letterSpacing: {
-        sm: '0%',
-        md: '4%',
-        lg: '8%',
-      },
-
-      borderRadius: {
-        none: '0px',
-        sm: '4px',
-        md: '8px',
-        lg: '10px',
-        full: '50vh',
       },
 
       keyframes: {
